@@ -1,0 +1,10 @@
+nav {
+    background: #2E2F30;
+    color: #fff;
+    padding: 0.01em 1em;
+}
+
+nav > button {
+    float: right;
+    margin-top: 1em;
+}

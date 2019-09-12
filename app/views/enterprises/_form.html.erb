@@ -1,0 +1,37 @@
+<%= form_with(model: enterprise, local: true) do |form| %>
+  <% if enterprise.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(enterprise.errors.count, "error") %> prohibited this enterprise from being saved:</h2>
+
+      <ul>
+        <% enterprise.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.number_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :environments_id %>
+    <%= form.text_field :environments_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :services_id %>
+    <%= form.text_field :services_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
